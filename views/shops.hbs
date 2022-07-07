@@ -1,0 +1,45 @@
+<div class="row">
+
+  <div class="col s3">
+    <ul class="collection with-header">
+
+      <li class="collection-header"><h4>Shops:</h4></li>
+      <div class="collection-item"><a href="/?shop=McDonny"><i>Mc Donny</i></a></div>
+      <div class="collection-item"><a href="/?shop=CFK"><i>CFK</i></a></div>
+      <div class="collection-item"><a href="/?shop=Ollys"><i
+          >Olly`s</i></a></div>
+      <div class="collection-item"><a href="/?shop=Salatera"><i
+          >Salatera</i></a></div>
+      {{#if shopFilter}}
+        <div class="all"><a href="/"><i>Show all</i></a></div>
+      {{/if}}
+    </ul>
+  </div>
+
+  <div class="col s9 menu">
+
+    {{#if food.length}}
+      {{#each food}}
+        <div class="col s9 m6 l6">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{img}}" alt="{{title}}" />
+            </div>
+            <div class="card-content">
+              <span class="card-title">{{title}}</span>
+              <p class="price">{{price}}</p>
+            </div>
+            <div class="card-action actions">
+              <form action="/card/add" method="POST">
+                <input type="hidden" name="id" value="{{id}}" />
+                <button type="submit" class="btn btn-primary">add to Cart</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <p>coming soon...&#10024;</p>
+    {{/if}}
+  </div>
+</div>

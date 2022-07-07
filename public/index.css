@@ -1,0 +1,58 @@
+.nav-wrapper {
+  padding: 0 2rem;
+}
+
+/*.flexbox {
+  display: flex;
+  justify-content: center;
+}*/
+div.all {
+  background-color: rgb(235, 234, 234);
+  text-align: center;
+  font-weight: bold
+}
+
+.menu {
+  border: 1px solid rgb(170, 168, 168);
+  margin: 2 rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collection-header{
+  color: #ee6e73;
+}
+
+.brand-logo {
+  width: 250px;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.course {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course h1 {
+  margin-bottom: 2rem;
+}
+
+.course img {
+  max-width: 600px;
+  height: auto;
+}
+
+.course .price.big {
+  font-size: 2.5rem;
+}
+
+.card-action.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

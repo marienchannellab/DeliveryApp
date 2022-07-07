@@ -1,0 +1,20 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">Delivery app</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+      {{#if isCourses}}
+        <li class="active"><a href="/">Shop</a></li>
+      {{else}}
+        <li><a href="/">Shop</a></li>
+      {{/if}}
+
+      {{#if isCard}}
+        <li class="active"><a href="/card">Shopping Cart</a></li>
+      {{else}}
+        <li><a href="/card">Shopping Cart</a></li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>

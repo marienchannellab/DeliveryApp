@@ -1,0 +1,65 @@
+<div class="row">
+  <form class="col s6">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="name" type="text" class="validate" />
+        <label for="name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email_inline" type="email" class="validate" />
+        <label for="email_inline">Email</label>
+        <span class="helper-text" data-error="wrong" data-success="right">Helper
+          text</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="phone" type="tel" class="validate" />
+        <label for="phone">Phone</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="address" type="text" class="validate" />
+        <label for="address">Address</label>
+      </div>
+    </div>
+  </form>
+
+  <div id="card">
+    <form class="col s6">
+      {{#if courses.length}}
+        <table>
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Количество</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            {{#each courses}}
+              <tr>
+                <td>{{title}}</td>
+                <td>{{count}}</td>
+                <td>
+                  <button
+                    class="btn btm-small js-remove"
+                    data-id="{{id}}"
+                  >Удалить</button>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+
+        <p><strong>Цена:</strong> <span class="price">{{price}}</span></p>
+      {{else}}
+        <p>Корзина пуста</p>
+      {{/if}}
+    </form>
+  </div>
+</div>
